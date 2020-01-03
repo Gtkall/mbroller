@@ -129,7 +129,7 @@ export class AppComponent implements OnInit {
         break;
       }
       case 'number': {
-        this.snackBar.open(`${message} Casualties`, 'Dismiss', {duration: 5000, verticalPosition: 'bottom'});
+        this.snackBar.open(`Casualties: ${message}`, 'Dismiss', {duration: 5000, verticalPosition: 'bottom'});
         break;
       }
     }

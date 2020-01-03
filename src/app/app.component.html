@@ -40,19 +40,19 @@
       [(ngModel)]="badRolls"></textarea>
   </mat-form-field>
 
-  <mat-grid-list cols="3" rowHeight="25px" gutterSize="5px">
+  <mat-grid-list cols="3" rowHeight="100px" gutterSize="5px">
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-      <button type="button" (click)="resolve()" mat-icon-button color="primary" aria-label="">
+      <button type="button" (click)="resolve()" mat-fab color="primary" aria-label="">
         <mat-icon>check_circle</mat-icon>
       </button>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-      <button type="button" (click)="showCasualties()" mat-icon-button color="primary" aria-label="">
+      <button type="button" (click)="showCasualties()" mat-fab color="primary" aria-label="">
         <mat-icon>whatshot</mat-icon>
       </button>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-      <button type="button" (click)="clear()" mat-icon-button color="warn" aria-label="">
+      <button type="button" (click)="clear()" mat-fab color="warn" aria-label="">
         <mat-icon>delete</mat-icon>
       </button>
     </mat-grid-tile>
