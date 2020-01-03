@@ -1,0 +1,60 @@
+<form #MBRollerForm="ngForm" class="container-form">
+  <mat-form-field class="form-full-width">
+    <input matInput type="number" name="goodValue" placeholder="Good Guys" [(ngModel)]="goodValue">
+  </mat-form-field>
+  <mat-grid-list cols="2" rowHeight="75px" gutterSize="0px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="valueDecr('good')" mat-stroked-button color="primary">
+        <mat-icon>exposure_minus_1</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="valueIncr('good')" mat-stroked-button color="primary">
+        <mat-icon>exposure_plus_1</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-form-field class="form-full-width">
+    <input matInput type="number" name="badValue" placeholder="Bad Guys" [(ngModel)]="badValue">
+  </mat-form-field>
+  <mat-grid-list cols="2" rowHeight="75px" gutterSize="0px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="valueDecr('bad')" mat-stroked-button color="primary">
+        <mat-icon>exposure_minus_1</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="valueIncr('bad')" mat-stroked-button color="primary">
+        <mat-icon>exposure_plus_1</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <br>
+  <mat-form-field class="form-full-width">
+    <textarea matInput disabled name="goodRolls" placeholder="Good Guy Rolls:" cols="" rows=""
+      [(ngModel)]="goodRolls"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="form-full-width">
+    <textarea matInput disabled name="badRolls" placeholder="Bad Guy Rolls:" cols="" rows=""
+      [(ngModel)]="badRolls"></textarea>
+  </mat-form-field>
+
+  <mat-grid-list cols="3" rowHeight="25px" gutterSize="5px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="resolve()" mat-icon-button color="primary" aria-label="">
+        <mat-icon>check_circle</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="showCasualties()" mat-icon-button color="primary" aria-label="">
+        <mat-icon>whatshot</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <button type="button" (click)="clear()" mat-icon-button color="warn" aria-label="">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
